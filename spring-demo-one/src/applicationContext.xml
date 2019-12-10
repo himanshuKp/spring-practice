@@ -7,6 +7,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<!-- load the properties file here -->
+	<context:property-placeholder location="classpath:sports.properties"/>
+
+	<!-- log generation code -->
 	<bean id="myLoggerConfig" class="com.him.springdemo.MyLoggerConfig" init-method="initLogger">
     	<property name="rootLoggerLevel" value="FINE" />
     	<property name="printedLoggerLevel" value="FINE"/>
@@ -26,8 +30,8 @@
     <bean id="myCricketCoach" class="com.him.springdemo.CricketCoach">
     <!-- set up setter injection -->
     	<property name="fortuneService" ref="myFortune" />
-    	<property name="emailAddress" value="himanshu@gmail.com" />
-    	<property name="team" value = "Sunrisers Hyderabad" />
+    	<property name="emailAddress" value="${foo.email}" />
+    	<property name="team" value = "${foo.team}" />
     </bean>
     
 </beans>
