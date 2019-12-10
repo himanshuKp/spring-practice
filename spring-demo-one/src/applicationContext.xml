@@ -22,6 +22,11 @@
     	<!-- set up constructor injection -->
     	<constructor-arg ref="myFortune"/>
     </bean>
+    
+    <bean id="myCricketCoach">
+    
+    </bean>
+    
 </beans>
 
 
