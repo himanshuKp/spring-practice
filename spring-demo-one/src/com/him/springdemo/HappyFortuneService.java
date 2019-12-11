@@ -11,7 +11,7 @@ public class HappyFortuneService implements FortuneService {
   @Override
   public String getFortune() {
     
-    int randomInt = new Random().nextInt(3);
+    int randomInt = new Random().nextInt(myFortunes.length);
     return myFortunes[randomInt];
     
   }
