@@ -10,6 +10,9 @@
 	<!-- add entry to enable component scanning  -->
 	<context:component-scan base-package="com.him.springdemo" />
 	
+	<!-- load the properties file -->
+	<context:property-placeholder location="classpath:sports.properties"/>
+	
 	<!-- log generation code -->
 	<bean id="myLoggerConfig" class="com.him.springdemo.MyLoggerConfig" init-method="initLogger">
     	<property name="rootLoggerLevel" value="FINE" />

@@ -16,6 +16,10 @@ public class AnnotationDemoApp {
     System.out.println(theCoach.getDaillyWorkout());
     
     System.out.println(theCoach.getDailyFortune());
+    
+    System.out.println(theCoach.getEmail());
+    
+    System.out.println(theCoach.getName());
 //    close the context
     context.close();
 
