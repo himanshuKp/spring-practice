@@ -17,11 +17,10 @@ public class JavaConfigDemoApp {
     
     System.out.println(theCoach.getDailyFortune());
     
-    /*//can be used with xml config for now
     System.out.println(theCoach.getEmail());
     
     System.out.println(theCoach.getName());
-    */
+    
 //    close the context
     context.close();
 

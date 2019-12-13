@@ -2,8 +2,10 @@ package com.him.springdemo;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
+@PropertySource("classpath:sports.properties")
 //@ComponentScan("com.him.springdemo")
 public class SportConfig {
 
