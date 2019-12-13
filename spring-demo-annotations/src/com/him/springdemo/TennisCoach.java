@@ -8,9 +8,19 @@ public class TennisCoach implements Coach {
 
   private FortuneService fortuneService;
   
+  /*
+   * @Autowired public TennisCoach(FortuneService theFortuneService) {
+   * fortuneService = theFortuneService; }
+   */
+  
+  public TennisCoach() {
+    System.out.println("TennisCoach: Inside default constructor");
+  }
+  
   @Autowired
-  public TennisCoach(FortuneService theFortuneService) {  
-    fortuneService = theFortuneService;  
+  public void setFortuneService(FortuneService fortuneService) {
+    System.out.println("Inside setter method for tennis coach : setFortuneService");
+    this.fortuneService = fortuneService;
   }
   
   @Override
