@@ -11,6 +11,6 @@
 <h2>Spring MVC Hello World!</h2>
 <hr>
 <h3>Welcome - ${param.studentName}</h3>
-
+<h3>Message: ${message}</h3>
 </body>
 </html>
