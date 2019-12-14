@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/hello")
 public class HellloWorldController {
   
 //  need a form to submit the request
@@ -25,7 +26,7 @@ public class HellloWorldController {
   }
   
 //  load the data from the form and send it to model
-  @RequestMapping("processFormVersionTwo")
+  @RequestMapping("/processFormVersionTwo")
   public  String letsShoutDude(HttpServletRequest request, Model model) {
     
 //    read the request parameter from HTML form
@@ -44,7 +45,7 @@ public class HellloWorldController {
   }
   
 //  process form version 3 using @RequestParam
-  @RequestMapping("processFormVersionThree")
+  @RequestMapping("/processFormVersionThree")
   public String processFormVersionThree(
       @RequestParam("studentName") String theName, Model model
       ) {

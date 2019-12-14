@@ -10,7 +10,7 @@
 	
 	<h2>Spring MVC Demo app</h2>
 	<hr>
-	<h3><a href="showForm">Hello World Form</a></h3>
+	<h3><a href="hello/showForm">Hello World Form</a></h3>
 		
 </body>
 </html>
