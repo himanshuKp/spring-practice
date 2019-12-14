@@ -4,13 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Index</title>
+<title>Student confirmation page</title>
 </head>
 <body>
-	
-	<h2>Spring MVC Demo app</h2>
-	<hr>
-	<h3><a href="hello/showForm">Hello World Form</a></h3>
-	<h3><a href="student/showForm">Student Form</a></h3>
+
+<h2>Student details are as: </h2>
+
+<h4>Firstname: ${student.firstName}</h4>
+<h4>Lastname: ${student.lastName}</h4>
+
 </body>
 </html>
