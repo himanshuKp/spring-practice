@@ -15,5 +15,7 @@
 <h4>Lastname: ${student.lastName}</h4>
 <br><br>
 Country: ${student.country}
+<br><br>
+Favorite Language: ${student.favoriteLanguage}
 </body>
 </html>
