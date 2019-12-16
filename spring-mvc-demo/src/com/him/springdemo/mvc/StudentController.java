@@ -2,9 +2,12 @@ package com.him.springdemo.mvc;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -12,6 +15,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/student")
 public class StudentController {
   
+	// register customer editor to our controller, trim all leading and 
+	// trailing whitespaces. resolves issue of our validation
+	@InitBinder
+	public void initBinder(WebDataBinder dataBinder) {
+		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
+		dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
+	}
+	
 //  mapping to page for submission of data
   @RequestMapping("/showForm")
   public String studentSubmissionForm(Model theModel) {
@@ -36,6 +47,8 @@ public class StudentController {
     "\nStudent Country: " +theStudent.getCountryOptions()+"\nStudent Language: "
     +theStudent.getFavoriteLanguageOptions());
 
+    System.out.println("\nFirstname: |"+theStudent.getFirstName()+"|\nLastname: |"+theStudent.getLastName()+"|");
+    
     if(bindingResult.hasErrors()) {
     	return "student-form";
     }

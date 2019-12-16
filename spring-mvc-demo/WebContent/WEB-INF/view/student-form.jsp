@@ -6,6 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Enter student details</title>
+<style type="text/css">
+	.error{
+		color: red
+	})
+</style>
 </head>
 <body>
 

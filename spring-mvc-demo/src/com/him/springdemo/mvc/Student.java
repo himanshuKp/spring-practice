@@ -108,6 +108,4 @@ public void setFavoriteOS(String favoriteOS) {
 	this.favoriteOS = favoriteOS;
 }
 
-
-
 }
