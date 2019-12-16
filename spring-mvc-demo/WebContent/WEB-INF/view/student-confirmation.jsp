@@ -11,7 +11,9 @@
 <h2>Student details are as: </h2>
 
 <h4>Firstname: ${student.firstName}</h4>
+<br><br>
 <h4>Lastname: ${student.lastName}</h4>
-
+<br><br>
+Country: ${student.country}
 </body>
 </html>

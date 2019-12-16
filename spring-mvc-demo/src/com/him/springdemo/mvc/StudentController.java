@@ -27,7 +27,8 @@ public class StudentController {
   public String studentSubmittedFormData(@ModelAttribute("student") Student theStudent) {
 
     //    log the submitted data
-    System.out.println("Student first name: " +theStudent.getFirstName()+ "\nStudent last name: " +theStudent.getLastName());
+    System.out.println("Student first name: " +theStudent.getFirstName()+ "\nStudent last name: " +theStudent.getLastName() + 
+    "\nStudent Country: " +theStudent.getCountryOptions());
     
     return "student-confirmation";
   }
