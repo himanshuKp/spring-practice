@@ -1,7 +1,10 @@
 package com.him.springdemo.mvc;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -24,14 +27,21 @@ public class StudentController {
   
 //  process data submitted by student-form.jsp
   @RequestMapping("/processForm")
-  public String studentSubmittedFormData(@ModelAttribute("student") Student theStudent) {
+  public String studentSubmittedFormData(
+		  @Valid @ModelAttribute("student") Student theStudent,
+		  BindingResult bindingResult) {
 
     //    log the submitted data
     System.out.println("Student first name: " +theStudent.getFirstName()+ "\nStudent last name: " +theStudent.getLastName() + 
     "\nStudent Country: " +theStudent.getCountryOptions()+"\nStudent Language: "
     +theStudent.getFavoriteLanguageOptions());
-    
-    return "student-confirmation";
+
+    if(bindingResult.hasErrors()) {
+    	return "student-form";
+    }
+    else {
+    	return "student-confirmation";
+    }   
   }
   
 }

@@ -2,10 +2,19 @@ package com.him.springdemo.mvc;
 
 import java.util.LinkedHashMap;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Student {
 
 //  instance variable to be used in form
+  @NotNull(message="is required")
+  @Size(min=1,message="is required")
   private String firstName;
+  
+  //perform spring validation using hibernate validator
+  @NotNull(message="is required")
+  @Size(min=1,message="is required")
   private String lastName;
   //field for country 
   private String country;
