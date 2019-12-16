@@ -33,6 +33,8 @@
 	-->
 	<form:radiobuttons path="favoriteLanguage" items="${student.favoriteLanguageOptions}"/>
 	<br><br>
+	Which OS you are familiar with:
+	<form:checkboxes items="${student.favoriteOSOptions}" path="favoriteOS"/>
 	<input type="submit" value="Submit" /> 
 </form:form>
 
