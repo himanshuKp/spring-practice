@@ -14,6 +14,8 @@ public class Student {
   //  create a collection of country list
   private LinkedHashMap<String, String> countryOptions;
   
+  private LinkedHashMap<String, String> favoriteLanguageOptions;
+  
   public Student() {
     System.out.println("Inside student class constructor");
     
@@ -25,6 +27,13 @@ public class Student {
     countryOptions.put("IN", "India");
     countryOptions.put("CH", "China");
     countryOptions.put("RS", "Russia");
+    
+    //put data in favorite collection
+    favoriteLanguageOptions = new LinkedHashMap<String, String>();
+    favoriteLanguageOptions.put("Java", "Java");
+    favoriteLanguageOptions.put("PHP", "PHP");
+    favoriteLanguageOptions.put("C#", "C#");
+    favoriteLanguageOptions.put("Ruby", "Ruby");
   }
   
 //generate name getters and setter
@@ -63,6 +72,10 @@ public String getFavoriteLanguage() {
 
 public void setFavoriteLanguage(String favoriteLanguage) {
 	this.favoriteLanguage = favoriteLanguage;
+}
+
+public LinkedHashMap<String, String> getFavoriteLanguageOptions() {
+	return favoriteLanguageOptions;
 }
 
 }
