@@ -30,7 +30,7 @@ public class StudentController {
 //    create student class object
     Student theStudent = new Student();
     
-//    add student object to the model
+//   add student object to the model
     theModel.addAttribute("student", theStudent);
     
     return "student-form";
@@ -48,6 +48,12 @@ public class StudentController {
     +theStudent.getFavoriteLanguageOptions());
 
     System.out.println("\nFirstname: |"+theStudent.getFirstName()+"|\nLastname: |"+theStudent.getLastName()+"|");
+    
+    System.out.println("\nYears of Experience: |"+theStudent.getYearsOfExperience()+"|");
+    
+    System.out.println("\nPostal Code: |"+theStudent.getPostalCode()+"|");
+    
+    System.out.println("Binding result: " +bindingResult);
     
     if(bindingResult.hasErrors()) {
     	return "student-form";

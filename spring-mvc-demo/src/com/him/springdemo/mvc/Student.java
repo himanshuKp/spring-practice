@@ -2,7 +2,10 @@ package com.him.springdemo.mvc;
 
 import java.util.LinkedHashMap;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Student {
@@ -20,6 +23,16 @@ public class Student {
   private String country;
   private String favoriteLanguage;
   private String favoriteOS;
+  
+  @NotNull(message="is required")
+  @Min(value=0,message="must be greater than or equal to 0")
+  @Max(value=10,message="must be less than or equal to 10")
+  private int yearsOfExperience;
+  
+  @NotNull(message="is required")
+  @Size(min=1,message="is required")
+  @Pattern(regexp = "^[0-9]{5}",message="only 5 digits")
+  private String postalCode;
   
   //  create a collection of country list
   private LinkedHashMap<String, String> countryOptions;
@@ -106,6 +119,22 @@ public String getFavoriteOS() {
 
 public void setFavoriteOS(String favoriteOS) {
 	this.favoriteOS = favoriteOS;
+}
+
+public int getYearsOfExperience() {
+	return yearsOfExperience;
+}
+
+public void setYearsOfExperience(int yearsOfExperience) {
+	this.yearsOfExperience = yearsOfExperience;
+}
+
+public String getPostalCode() {
+	return postalCode;
+}
+
+public void setPostalCode(String postalCode) {
+	this.postalCode = postalCode;
 }
 
 }

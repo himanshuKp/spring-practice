@@ -11,13 +11,17 @@
 <h2>Student details are as: </h2>
 
 <h4>Firstname: ${student.firstName}</h4>
-<br><br>
+<br>
 <h4>Lastname: ${student.lastName}</h4>
-<br><br>
+<br>
 Country: ${student.country}
-<br><br>
+<br>
 Favorite Language: ${student.favoriteLanguage}
-<br><br>
+<br>
 Favorite OS: ${student.favoriteOS}
+<br>
+Years of Experience: ${student.yearsOfExperience}
+<br>
+Postal Code: ${student.postalCode}
 </body>
 </html>

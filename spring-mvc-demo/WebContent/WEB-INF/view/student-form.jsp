@@ -42,6 +42,15 @@
 	<br><br>
 	Which OS you are familiar with:
 	<form:checkboxes items="${student.favoriteOSOptions}" path="favoriteOS"/>
+	<br><br>
+	How much year of experience do you have ?
+	<form:input path="yearsOfExperience"/>
+	<form:errors path="yearsOfExperience" cssClass="error"/>
+	<br>
+	Postal Code (*):
+	<form:input path="postalCode"/>
+	<form:errors path="postalCode" cssClass="error"/>
+	<br>
 	<input type="submit" value="Submit" /> 
 </form:form>
 
