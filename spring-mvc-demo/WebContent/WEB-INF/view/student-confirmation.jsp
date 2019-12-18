@@ -20,7 +20,7 @@ Favorite Language: ${student.favoriteLanguage}
 <br>
 Favorite OS: ${student.favoriteOS}
 <br>
-Years of Experience: ${student.yearsOfExperience}
+Course code: ${student.courseCode}
 <br>
 Postal Code: ${student.postalCode}
 </body>

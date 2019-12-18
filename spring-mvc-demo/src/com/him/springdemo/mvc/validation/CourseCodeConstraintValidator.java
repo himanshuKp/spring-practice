@@ -5,12 +5,30 @@ import javax.validation.ConstraintValidatorContext;
 
 public class CourseCodeConstraintValidator implements ConstraintValidator<CourseCode, String> {
 
-	
+	private String[] coursePrefix;
 	
 	@Override
-	public boolean isValid(String arg0, ConstraintValidatorContext arg1) {
+	public void initialize(CourseCode theCourseCode) {
 		// TODO Auto-generated method stub
-		return false;
+		coursePrefix = theCourseCode.value();
 	}
 	
+	@Override
+	public boolean isValid(String theCode, ConstraintValidatorContext theConstraintValidatorContext) {
+		boolean result = false;
+		
+		if(theCode!=null) {
+			for(String tempPrefix:coursePrefix) {
+				result = theCode.startsWith(tempPrefix);
+				if(result) {
+					break;
+				}
+			}
+		} else {
+			result = true;
+		}
+
+		return result;
+	}
+
 }

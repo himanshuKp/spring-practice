@@ -8,6 +8,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.him.springdemo.mvc.validation.CourseCode;
+
 public class Student {
 
 //  instance variable to be used in form
@@ -23,6 +25,9 @@ public class Student {
   private String country;
   private String favoriteLanguage;
   private String favoriteOS;
+  
+  @CourseCode
+  private String courseCode;
   
   @NotNull(message="is required")
   @Min(value=0,message="must be greater than or equal to 0")
@@ -135,6 +140,14 @@ public String getPostalCode() {
 
 public void setPostalCode(String postalCode) {
 	this.postalCode = postalCode;
+}
+
+public String getCourseCode() {
+	return courseCode;
+}
+
+public void setCourseCode(String courseCode) {
+	this.courseCode = courseCode.toUpperCase();
 }
 
 }
